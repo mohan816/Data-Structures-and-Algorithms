@@ -3,6 +3,14 @@ package arrays.practice.problems;
 import java.util.Arrays;
 
 public class sortArrayEvenOddInPos {
+	
+	/*
+	 * Create a new array with size of nums.length
+	 * create two varaibles one for even position and the other for odd position
+	 * if we mod the value aand it is equal to zero push it even position and increment even position by 2
+	 * if it not zero, then push it odd pos and add 2 to odd pos variable
+	 * return newly created array
+	 */
 
 	
 		// TODO Auto-generated method stub

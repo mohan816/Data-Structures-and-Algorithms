@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 public class SortArrayByParity {
 	
+	/*
+	 * create new array of size nums.length
+	 * push even values to front and once completed then push the odd values to next
+	 * 
+	 */
+	
 	 public static int[] sortArrayByParityWithoutMod(int[] nums) {
 	        int[] arr = new int[nums.length];
 	        int j = 0;
