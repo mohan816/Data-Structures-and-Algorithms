@@ -52,6 +52,7 @@ public class SortArrayByParity {
 	         return arr;
 	    }
 	 
+	 //odd positions are changing.
 	 public static int[] sortArrayTwoPointer(int[] nums) {
 		 int start = 0, end = nums.length - 1;
 		 while(start < end) {
@@ -76,6 +77,9 @@ public class SortArrayByParity {
 		 }
 		 return nums;
 	 }
+	 
+	 //Solving 
+	// public static 
 	 
 	 public static int[] sortArray(int[] nums) {
 		 int[] eArr = new int[nums.length];
@@ -115,7 +119,7 @@ public class SortArrayByParity {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		  int[] nums = {3,1,2,4};
-		 int[] arr = sortArray(nums);
+		 int[] arr = sortArrayTwoPointer(nums);
 		 for(int i = 0; i < arr.length; i++) {
 			 System.out.print(arr[i]+" ");
 		 }
