@@ -4,7 +4,7 @@ public class MergeStringsAlternatively {
 	
 	/*
 	 * 1) first start from string1 as outer loop and string 2 as inner loop...If string 1is
-	 * greater than also we can  append all the characters to the merge string.
+	 * greater than also we can  append all the characters to the merge string with the help of that loop.
 	 * 2) If string2 is greater than, we need to find difference between two strings
 	 * and we need to subtract string2 length with difference...Then start another loop with
 	 * the the value of string2 length - difference until string2.length()
