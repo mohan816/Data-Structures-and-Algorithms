@@ -2,7 +2,7 @@ package arrays.practice.problems;
 
 public class RemoveElement {
 	
-	/*
+	/*  https://leetcode.com/problems/remove-element/
 	 * positive - > Array with more than one values
 	 * edge - > All values matching with target.
 	 * negative - > array with one value and that one is not matching with target -> return 1
@@ -41,6 +41,7 @@ public class RemoveElement {
 	                end--;
 	            }
 	            else if(nums[start] != val && nums[end] != val){
+	            	//count++;
 	                start++;
 	            }
 	       }
@@ -50,12 +51,33 @@ public class RemoveElement {
 	       
 	        
 	    }
+	 //optimized solution
+	 public static int removeElementOptimized(int[] arr, int a) {
+		 
+		 int i = 0, j = arr.length-1;
+		 int count = 0;
+		 while(i <= j) {
+			 if(arr[i] != a) {
+				 count++;
+				 i++;
+			 }
+			 else if(arr[i] == a) {
+				 int temp = arr[i];
+				 arr[i] = arr[j];
+				 arr[j] = temp;
+				 j--;
+			 }
+		 }
+		 
+		 return count;
+	 }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = {0,1,2,2,3,0,4,2};
-		int a = removeElement(arr, 2);
-		System.out.println(a);
+		//int a = removeElement(arr, 2);
+		int count = removeElementOptimized(arr, 2);
+		System.out.println(count);
 		
 
 	}

@@ -7,6 +7,7 @@ public class MissingNumber1To100 {
 	public static void missingNumbers(int[] arr) {
 		//This code will work if the given array is in ascending order
 		int i = 1, j = 100, start = 0, end = arr.length - 1;
+		//Ologn
 		while(i <= j) {
 			if(arr[start] == i && arr[end] == j) {
 				start++;
@@ -33,7 +34,7 @@ public class MissingNumber1To100 {
 			}
 		}
 	}
-	
+	   //O(n^2)
 	public static void missingNumbersA(int[] arr) {
 		System.out.println("Missing Numbers are : ");
 		for(int i = 1; i <= 100; i++) {
@@ -41,6 +42,7 @@ public class MissingNumber1To100 {
 			 for(int j = 0; j < arr.length; j++) {
 				 if(arr[j] == i) {
 					 count++;
+					 break;
 				 }
 			 }
 			 if(count == 0) {

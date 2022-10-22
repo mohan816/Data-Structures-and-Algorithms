@@ -3,13 +3,30 @@ package Strings.practice.problems;
 import java.util.Arrays;
 
 public class ShortestDistanceToACharacter {
+	//Positive - > String s = "loveleetcode";char c = 'e';
+	//Negative - > No target character
+	//Edge - > Empty String
 	
+	/*  Forward direction
+	 * 1) Convert String into empty array
+	 * 2) Assign int min/2 value to eindex
+	 * 3) Create an Array with String length
+	 * 4) Start the for loop from index 0 upto length-1, if e is there assign its index value to eIndex variable.
+	 * 5) store it in array i - eIndex
+	 * 
+	 * Backward Direction
+	 * 1) Assign int max/2 value to eIndex
+	 * 2) Start the for loop from index length-1 to 0, if e is there assign its index value to eIndex variable.
+	 * 3) Use Math.min function(If the value is greater in array replace it with current value else leave as it is),
+	 */
+	
+	//Time Complexity - O(n)
 	public static void shortestDistance(String s, char c) {
 		//int a = - 10;
 		//int b = 2;
 		//System.out.println(a/b);
 		char[] strch = s.toCharArray();
-	    int eIndex = Integer.MIN_VALUE;
+	    int eIndex = Integer.MIN_VALUE/2;
 	    System.out.println(eIndex);
 	    int[] res = new int[strch.length];
 

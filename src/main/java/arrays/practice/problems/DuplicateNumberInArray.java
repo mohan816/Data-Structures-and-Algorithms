@@ -2,6 +2,7 @@ package arrays.practice.problems;
 
 public class DuplicateNumberInArray {
 
+	//Time Complexity O(n^2)
 	public static void duplicateInArray(int[] arr) {
 		for(int i = 0; i < arr.length - 1; i++) {
 			int count = 0;
@@ -21,7 +22,7 @@ public class DuplicateNumberInArray {
 		}
 		//System.out.println("Mohan");
 	}
-	
+	//Time Complexity is O(n^2)
 	public static void multipleDuplicates(int[] arr) {
 		for(int i = 0; i < arr.length - 1; i++) {
 			int count = 0;

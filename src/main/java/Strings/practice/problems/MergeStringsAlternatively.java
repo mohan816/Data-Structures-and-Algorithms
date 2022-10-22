@@ -2,14 +2,19 @@ package Strings.practice.problems;
 
 public class MergeStringsAlternatively {
 	
-	/*
-	 * 1) first start from string1 as outer loop and string 2 as inner loop...If string 1is
+	//Positive - > String s1 = "abc"; String s2 = "abc";
+	//edge - > String s1 = "abc", String s2 = "abcdedfg";
+	//negative - > if string 1 or string 2 is null
+	
+	/* https://leetcode.com/problems/merge-strings-alternately/
+	 * 1) first start from string1 as outer loop and string 2 as inner loop...If string 1 is
 	 * greater than also we can  append all the characters to the merge string with the help of that loop.
-	 * 2) If string2 is greater than, we need to find difference between two strings
-	 * and we need to subtract string2 length with difference...Then start another loop with
+	 * 2) If string2 is greater than start with the value of i in second loop and append it to newly
+	 * created string
 	 * the the value of string2 length - difference until string2.length()
 	 */
 	
+	//Time COmplexity - O(n^2)
 public static String mergeAlternately(String word1, String word2) {
         
         String s3 = "";

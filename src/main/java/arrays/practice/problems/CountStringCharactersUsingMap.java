@@ -11,6 +11,7 @@ public class CountStringCharactersUsingMap {
 	public static void countCharacters(String s) {
 
         //counting number of times each character present in the string and assign it to map
+		//Time Complexity is O(n)
 		Map<Character, Integer> map = new LinkedHashMap<Character, Integer>();
 		for(int i = 0; i < s.length(); i++) {
 			Character c = s.charAt(i);
@@ -22,6 +23,7 @@ public class CountStringCharactersUsingMap {
 			}
 		}
 		int min = 1, max = Integer.MIN_VALUE;
+		char maxCharacter = '\u0000';
 		System.out.println("Minimum characters are ");
 		for (Entry<Character, Integer> ch : map.entrySet()) {
 			if(min == ch.getValue()) {
@@ -29,14 +31,15 @@ public class CountStringCharactersUsingMap {
 			}
 			else if(max < ch.getValue()) {
 				max = ch.getValue();
+				maxCharacter = ch.getKey();
 			}
 		}
-		System.out.println("Maximum character is ");
-		for (Entry<Character, Integer> ch : map.entrySet()) {
-			if(max == ch.getValue()) {
-				System.out.println(ch.getKey()+" "+ch.getValue());
-			}
-		}
+		
+		System.out.println("Maximum character is "+maxCharacter+" " +max);
+		/*
+		 * for (Entry<Character, Integer> ch : map.entrySet()) { if(max ==
+		 * ch.getValue()) { System.out.println(ch.getKey()+" "+ch.getValue()); } }
+		 */
 }
 
 	public static void main(String[] args) {

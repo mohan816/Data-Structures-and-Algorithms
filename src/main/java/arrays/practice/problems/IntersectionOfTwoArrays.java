@@ -2,6 +2,8 @@ package arrays.practice.problems;
 
 public class IntersectionOfTwoArrays {
 	
+	//https://leetcode.com/problems/intersection-of-two-arrays/
+	//O(n^2)
 	 public int[] intersection(int[] nums1, int[] nums2) {
 
 	        //removing duplicates in first array

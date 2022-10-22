@@ -5,6 +5,7 @@ public class CountStringCharacters {
 	public static void countCharacters(String s) {
 		
 		int[] count = new int[256];
+		//Time COmplexity O(n)
 		for(int i = 0; i < s.length(); i++) {
 			//System.out.println(count[i]);
 			count[s.charAt(i)]++;
