@@ -16,7 +16,7 @@ public class ReversePrefixOfWord {
 	 * 7) Create an empty string and append all the characters
 	 */
 	
-	//Time Complexity - > O(n)
+	//Time Complexity - > O(n), space O(n)
 	 public static String reversePrefix(String word, char ch) {
 		 //Converting to character array
 	        char[] c = word.toCharArray();
@@ -42,15 +42,19 @@ public class ReversePrefixOfWord {
 	           i++;
 	           j--;
 	        }
-	        //adding character array values to string
-	        String result = "";
-	        for(int k = 0; k < c.length; k++){
-	            result = result + c[k];
-	        }
-	        //returning the string
-	        return result;
 	        
-	    }
+	      //  return c.toString();
+			
+			  // //adding character array values to string //
+	        String result = ""; //
+			 for(int k = 0; k < c.length; k++)
+			 {
+				 result = result + c[k];
+			 }
+			 return result;
+	 }
+
+			 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

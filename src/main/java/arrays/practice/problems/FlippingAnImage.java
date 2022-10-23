@@ -7,7 +7,7 @@ public class FlippingAnImage {
 	      //Pseudo Code
 	// 1) Reverse each one dimensional array
 	// 2) If the value is 0 assign 1 and if the value is 1 assign 0
-	 //Time Complexity - > O(n^2)
+	 //Time Complexity - > O(n^2) space 0(1)
 	public static int[][] flipAndInvertImage(int[][] image) {
         // reversing each values of image[i]
 		//Time Complexity O(n^2)

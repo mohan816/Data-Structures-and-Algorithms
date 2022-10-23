@@ -14,7 +14,7 @@ public class MergeStringsAlternatively {
 	 * the the value of string2 length - difference until string2.length()
 	 */
 	
-	//Time COmplexity - O(n^2)
+	//Time COmplexity - O(n^2) O(n) - > space
 public static String mergeAlternately(String word1, String word2) {
         
         String s3 = "";

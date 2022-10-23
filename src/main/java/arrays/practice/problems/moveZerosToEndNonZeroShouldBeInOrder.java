@@ -19,6 +19,7 @@ public class moveZerosToEndNonZeroShouldBeInOrder {
         edge - {1,1,1,0,0}
         */
         int i = 0, j = 1;
+        //O(n^2) space O(1)
         while(i < arr.length && j < arr.length){
             if(arr[i] == 0 && arr[j] != 0){
                 int temp = arr[i];

@@ -15,7 +15,7 @@ public class VowelsNameReverse {
 	 * 6) Create an empty string and append all the characters and return the string
 	 */
 	//https://leetcode.com/problems/reverse-vowels-of-a-string/	
-      //Time Complexity - O(n)
+      //Time Complexity - O(n), space O(n)
 	public static String reverseVowels(String s) {
 		// String result = s;
 		char[] c =  s.toCharArray();

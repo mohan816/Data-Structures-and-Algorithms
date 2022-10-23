@@ -20,7 +20,7 @@ public class FaultySensor {
 		//index mismatch then to store
 		int s1 = 0, s2 = 0;
 		
-		//Time Complexity : O(n)
+		//Time Complexity : O(n), space : O(1)
 		
 		while(i < sensor1.length && j < sensor2.length) {
 			if(sensor1[i] == sensor2[j]) {

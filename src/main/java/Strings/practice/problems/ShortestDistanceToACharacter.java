@@ -20,7 +20,7 @@ public class ShortestDistanceToACharacter {
 	 * 3) Use Math.min function(If the value is greater in array replace it with current value else leave as it is),
 	 */
 	
-	//Time Complexity - O(n)
+	//Time Complexity - O(n), space O(n)
 	public static void shortestDistance(String s, char c) {
 		//int a = - 10;
 		//int b = 2;

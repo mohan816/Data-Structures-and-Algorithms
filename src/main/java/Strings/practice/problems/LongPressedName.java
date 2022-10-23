@@ -18,7 +18,7 @@ public class LongPressedName {
 	 * return true..else return false. 
 	 * 
 	 */
-             //Time complexity - > O(n + m)
+             //Time complexity - > O(n + m), space O(1)
 	public static boolean isLongPressedName(String name, String typed) {
 
 		int i = 0, j = 0;

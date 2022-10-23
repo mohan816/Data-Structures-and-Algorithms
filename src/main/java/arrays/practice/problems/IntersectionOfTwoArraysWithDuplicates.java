@@ -15,7 +15,7 @@ public class IntersectionOfTwoArraysWithDuplicates {
 	public static int[] intersectionOfTwoArrays(int[] nums1, int[] nums2) {
 	
 		//sorting the arrays
-		//O(nums1lognums1 + nums2Lognums2)
+		//O(nums1lognums1 + nums2Lognums2), space O(n)
 	 Arrays.sort(nums1);
      Arrays.sort(nums2);
      ArrayList ls = new ArrayList();

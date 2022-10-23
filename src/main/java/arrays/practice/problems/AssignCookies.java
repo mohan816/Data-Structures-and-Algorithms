@@ -19,7 +19,7 @@ public class AssignCookies {
        if(s.length == 0 || g.length == 0){
            return 0;
        }
-       //Time Complexity O(nlogn + mlogm)
+       //Time Complexity O(nlogn + mlogm), space O(1)
        Arrays.sort(g);
        Arrays.sort(s);
        int i = 0, j = 0;

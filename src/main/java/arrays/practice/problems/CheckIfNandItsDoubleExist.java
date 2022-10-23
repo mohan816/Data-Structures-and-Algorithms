@@ -11,7 +11,7 @@ public class CheckIfNandItsDoubleExist {
     first take arr[i] == 2 * arr[j] - > if matches true
     else take arr[j] == 2 * arr[i] - > if matches true
     */
-	//Time Complexity  - > O(n^2)
+	//Time Complexity  - > O(n^2) space - > O(1)
     public static boolean checkIfExist(int[] arr) {
     	if(arr.length == 0) {
     		return false;

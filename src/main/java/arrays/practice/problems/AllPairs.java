@@ -8,7 +8,7 @@ package arrays.practice.problems;
  * Create an inner for loop..
  * Compare outer and inner for loop vlaues if matches with x then return it
  */
-
+//Time Compexity O(n^2), space O(1)
 public class AllPairs {
 	
 	public static void allPairs(int[] arr, int x) {

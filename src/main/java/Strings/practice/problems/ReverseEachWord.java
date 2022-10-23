@@ -10,7 +10,7 @@ public class ReverseEachWord {
 	 * 2) reverse from first word last index..COntinue until splitted length
 	 */
 	//https://leetcode.com/problems/reverse-words-in-a-string-iii/
-	//Time Complexity - O(n^2)
+	//Time Complexity - O(n^2) space O(n)
 	public static String reverseWords(String s) {
         String result = "";
         String[] splitted = s.split(" ");

@@ -9,6 +9,7 @@ public class HappyNumber {
 	 */
 	
 	//https://leetcode.com/problems/happy-number/
+	//Time complexity O(n), space O(1)
 	 public static boolean isHappy(int n) {
 	        //using recursion
 	        if(n == 1 || n == 7){
