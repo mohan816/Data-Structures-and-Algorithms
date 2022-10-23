@@ -42,19 +42,19 @@ public class VowelsInSubStringK {
 			max = Math.max(max, count);
 		}
 		return max;
-		
-		
 	}
-
+      public static int bruteForceApproach(String s, int k) {
+    	  int count = 0, max = Integer.MIN_VALUE;
+    	 // for(int i = 0; )
+    	  return k;
+    	  
+      }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s = "workaattech";
 		int k = 3;
 		int result = vowelsMaxInSubstring(s,3);
 		System.out.println("Maximun number of count is " +result);
-		
-		
-
 	}
 
 }
