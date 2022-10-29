@@ -43,12 +43,26 @@ public class VowelsInSubStringK {
 		}
 		return max;
 	}
-      public static int bruteForceApproach(String s, int k) {
-    	  int count = 0, max = Integer.MIN_VALUE;
-    	 // for(int i = 0; )
-    	  return k;
-    	  
-      }
+	
+	//Optimized Solution
+	private int maxVowels(String input, int k){
+        if(k==0) return 0;
+        int current_count=0,max_count=0, index=0;
+
+        while(index < k-1)
+            current_count += isVowel(input.charAt(index++));
+
+        while(index < input.length()) {
+            current_count += isVowel(input.charAt(index++));
+            max_count = Math.max(max_count, current_count);
+            current_count -= isVowel(input.charAt(index-k));
+        }
+        return max_count;
+    }
+
+    private int isVowel(char character){
+        return character =='a'||character=='e'||character=='i'||character=='o'||character=='u' ? 1 : 0;
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s = "workaattech";

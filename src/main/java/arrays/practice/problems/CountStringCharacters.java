@@ -31,7 +31,7 @@ public class CountStringCharacters {
 				if(max == count[s.charAt(i)]) {
 					//count1++;
 					System.out.println("Max character " +s.charAt(i));
-					//break;
+					break;
 				}
 				
 			}

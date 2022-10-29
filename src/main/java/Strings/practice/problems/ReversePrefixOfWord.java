@@ -34,7 +34,7 @@ public class ReversePrefixOfWord {
 	        if(j > word.length()-1){
 	            return word;
 	        }
-	        //this loop will run array contains targeted character. Already j is there in the target character position.
+	        //this loop will run when array contains targeted character. Already j is there in the target character position.
 	        while(i < j){
 	           char dummy = c[i];
 	           c[i] = c[j];

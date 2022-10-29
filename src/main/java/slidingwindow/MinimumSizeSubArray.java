@@ -10,12 +10,12 @@ public class MinimumSizeSubArray {
 		     int min = Integer.MAX_VALUE;
 		     int i = 0, j = 0, sum = 0;
 		     //Start the first loop from index 0 to length-1
-		            while(i < nums.length){
-		                sum += nums[i++];
+		            for(i = 0; i < nums.length; i++){
+		                sum += nums[i];
 		                //if sum is greater or equal then enter into this loop
 		                while(sum >= target){
 		                	//finding the minimum length
-		                   min = Math.min(min, i - j);
+		                   min = Math.min(min, i - j + 1);
 		                   //reducing the values from 0th index and increasing it by 1
 		                   sum -= nums[j++];
 		                }
@@ -27,7 +27,8 @@ public class MinimumSizeSubArray {
 	 
         public static void main(String[] args) {
 		int[] a = {2,3,1,2,4,3};
-		minSubArrayLen(7,a);
+		int result = minSubArrayLen(7,a);
+		System.out.println(result);
 		}
 
 }

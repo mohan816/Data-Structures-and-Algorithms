@@ -2,6 +2,7 @@ package slidingwindow;
 
 import java.util.Arrays;
 
+//https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/
 public class DifferenceBetweenHighestAndLowest {
 	
 	public static int minimumDifference(int[] nums, int k) {
@@ -24,7 +25,8 @@ public class DifferenceBetweenHighestAndLowest {
 		// TODO Auto-generated method stub
 		int[] arr = {87063,61094,44530,21297,95857,93551,9918};
 		int k = 6;
-		minimumDifference(arr, 6);
+		int result = minimumDifference(arr, 6);
+		System.out.println(result);
 		
 
 	}
