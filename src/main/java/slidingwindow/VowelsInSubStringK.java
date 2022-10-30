@@ -10,7 +10,7 @@ public class VowelsInSubStringK {
 	 */
 	
 	public static int vowelsMaxInSubstring(String s, int k) {
-		HashSet<Character> c = new HashSet<>();
+		HashSet<Character> c = new HashSet<Character>();
 		c.add('A');
 		c.add('I');
 		c.add('E');
