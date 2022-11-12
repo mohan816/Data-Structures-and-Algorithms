@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
 
-public class FindCommonCharacters_Nov1 {
+public class Nov01_FindCommonCharacters {
 	
 	/*
     1) Create an array list to store the string values

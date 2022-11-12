@@ -2,7 +2,7 @@ package hashing;
 
 import java.util.HashMap;
 
-public class NumIdenticalPairs_Oct30 {
+public class Oct30_NumIdenticalPairs {
 	//https://leetcode.com/problems/number-of-good-pairs
 	
 	//Brute force approach

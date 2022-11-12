@@ -2,7 +2,7 @@ package hashing;
 
 import java.util.HashMap;
 
-public class TwoSumSorted_Oct30 {
+public class Oct30_TwoSumSorted {
 	
 	public int[] twoSum(int[] numbers, int target) {
 	       int[] result = new int[2];

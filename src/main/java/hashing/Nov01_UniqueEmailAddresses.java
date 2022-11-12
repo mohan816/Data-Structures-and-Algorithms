@@ -3,7 +3,7 @@ package hashing;
 import java.util.HashSet;
 import java.util.Set;
 
-public class UniqueEmailAddresses_Nov1 {
+public class Nov01_UniqueEmailAddresses {
 	//https://leetcode.com/problems/unique-email-addresses/
 	/*
 	 * 1) split the string using @ ,store it String part[]

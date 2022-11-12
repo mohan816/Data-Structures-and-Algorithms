@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * 3) iterate the stones and check those stones are there in array list, If it is there increase the count
  */
 
-public class JewelsAndStones_Nov3 {
+public class Nov03_JewelsAndStones {
 	
 	public static int numJewelsInStones(String jewels, String stones) {
 	    char[] ch = jewels.toCharArray();

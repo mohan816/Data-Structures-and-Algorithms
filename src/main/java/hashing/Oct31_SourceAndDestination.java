@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SourceAndDestination_Oct31 {
+public class Oct31_SourceAndDestination {
 	
 	//https://leetcode.com/problems/destination-city/description/
 	/*

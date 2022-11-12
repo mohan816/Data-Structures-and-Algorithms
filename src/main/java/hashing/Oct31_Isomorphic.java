@@ -3,7 +3,7 @@ package hashing;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Isomorphic_Oct31 {
+public class Oct31_Isomorphic {
 	
 	//https://leetcode.com/problems/isomorphic-strings/description/
 	/*

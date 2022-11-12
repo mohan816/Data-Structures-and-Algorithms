@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class UniqueMorseCode_Nov3 {
+public class Nov03_UniqueMorseCode {
 	
 	//https://leetcode.com/problems/unique-morse-code-words/description/
 	/*

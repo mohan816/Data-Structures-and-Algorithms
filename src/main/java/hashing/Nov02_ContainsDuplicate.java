@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-public class ContainsDuplicate_Nov2 {
+public class Nov02_ContainsDuplicate {
 	
 		 /*
 	    1) Create an empty map, And create an ArrayList and add all the array values

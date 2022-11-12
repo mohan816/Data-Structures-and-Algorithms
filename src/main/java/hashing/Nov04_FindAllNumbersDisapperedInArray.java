@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class FindAllNumbersDisapperedInArray_Nov4 {
+public class Nov04_FindAllNumbersDisapperedInArray {
 	
 	//https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 	/*

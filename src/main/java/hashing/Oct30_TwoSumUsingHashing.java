@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 
 //https://leetcode.com/problems/two-sum/
 
-public class TwoSumUsingHashing_Oct30 {
+public class Oct30_TwoSumUsingHashing {
 	
 	 public static int[] twoSum(int[] nums, int target) {
 	        int[] a = new int[2];

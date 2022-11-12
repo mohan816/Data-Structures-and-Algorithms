@@ -2,7 +2,7 @@ package hashing;
 
 import java.util.HashSet;
 
-public class NumberOfArithmeticTriplets_Nov3 {
+public class Nov03_NumberOfArithmeticTriplets {
 	
 	//https://leetcode.com/problems/number-of-arithmetic-triplets/
 	/*

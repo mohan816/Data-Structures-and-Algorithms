@@ -14,7 +14,7 @@ import java.util.Set;
  * 5) if it is not there in set and not an empty and count, return the count with highest value
  */
 
-public class MostCommonWords_Oct30 {
+public class Oct30_MostCommonWords {
 	
 	public static String mostCommonWord(String paragraph, String[] banned) {
 

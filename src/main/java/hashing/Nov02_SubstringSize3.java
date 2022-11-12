@@ -9,7 +9,7 @@ import java.util.HashSet;
  * 2) Put it in hash set if the size is 3 increase the count.
  */
 
-public class SubstringSize3_Nov2 {
+public class Nov02_SubstringSize3 {
 	
 	public static int countGoodSubstrings(String s) {
         if(s.length() == 1 || s.length() == 2){

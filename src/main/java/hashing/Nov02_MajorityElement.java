@@ -3,7 +3,7 @@ package hashing;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-public class MajorityElement_Nov2 {
+public class Nov02_MajorityElement {
 	
 	/*
     1) create an HashMap add the key and it's frequency'
