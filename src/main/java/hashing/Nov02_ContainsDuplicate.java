@@ -6,32 +6,23 @@ import java.util.Map.Entry;
 
 public class Nov02_ContainsDuplicate {
 	
-		 /*
-	    1) Create an empty map, And create an ArrayList and add all the array values
-	    2) then check whether the map contains array value if it contains then take value and substract with i.
-	    3) If the value is greater than, update the i value to the key
-	    4) If it is equal or less then return true
+		 /*//https://leetcode.com/problems/contains-duplicate-ii/
+	    1) Create an empty map
+	    2) then check whether the map contains array value if it contains then get that value and minus with i if it is less then return true
+	    3) If the value is greater than, update the i value to the ke
 	    */
 	    public static boolean containsNearbyDuplicate(int[] nums, int k) {
-	         HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
-	         ArrayList<Integer> al = new ArrayList<Integer>();
-	         for(int i = 0; i < nums.length; i++){
-	             al.add(nums[i]);
-	         }
-	       //int j = 0;
-	        for(int i = 0; i < al.size(); i++){
-	            if(map.containsKey(al.get(i))){
-	              if((Math.abs(map.get(al.get(i)) - i)) <= k){
-	                  return true;
+	    	 HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
+	         //int j = 0;
+	          for(int i = 0; i < nums.length; i++){
+	              if(map.containsKey(nums[i])){
+	                if((Math.abs(map.get(nums[i]) - i)) <= k)
+	                    return true;
 	              }
-	              map.put(al.get(i), i);
-	            }  
-	              else{
-	            	  map.put(al.get(i), i);
-	                }
-	            }
-	        return false;    
-	        }
+	                map.put(nums[i], i);
+	              }
+	          return false;    
+	          }   
        
 
 	public static void main(String[] args) {

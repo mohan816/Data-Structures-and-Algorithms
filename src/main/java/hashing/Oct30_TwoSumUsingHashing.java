@@ -1,5 +1,6 @@
 package hashing;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
@@ -25,6 +26,7 @@ public class Oct30_TwoSumUsingHashing {
 	public static void main(String[] args) {
 		int[] arr = {2,7,11,15};
 		int[] result = twoSum(arr,9);
+		System.out.println(Arrays.toString(result));
 		//output = 0,1
 
 	}

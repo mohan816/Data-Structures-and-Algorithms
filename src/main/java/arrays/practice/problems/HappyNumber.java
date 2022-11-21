@@ -24,8 +24,7 @@ public class HappyNumber {
 	            toStore = toStore + (r * r);
 	            n = n / 10;
 	              }
-	        boolean b = isHappy(toStore);
-	        return b;
+	        return isHappy(toStore);
 			/*
 			 * if(b) { return true; } else { return false; }
 			 */
