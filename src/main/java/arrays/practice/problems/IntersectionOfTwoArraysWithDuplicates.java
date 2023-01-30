@@ -2,6 +2,7 @@ package arrays.practice.problems;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class IntersectionOfTwoArraysWithDuplicates {
 	
@@ -15,33 +16,21 @@ public class IntersectionOfTwoArraysWithDuplicates {
 	public static int[] intersectionOfTwoArrays(int[] nums1, int[] nums2) {
 	
 		//sorting the arrays
-		//O(nums1lognums1 + nums2Lognums2), space O(n)
-	 Arrays.sort(nums1);
-     Arrays.sort(nums2);
-     ArrayList ls = new ArrayList();
-     int i = 0, j = 0;
-     //comparing the values
-     while(i < nums1.length && j < nums2.length){
-         if(nums1[i] == nums2[j]){
-             ls.add(nums1[i]);
-             i++;
-             j++;
-         }
-         else if(nums1[i] > nums2[j]){
-             j++;;
-         }
-         else if(nums1[i] < nums2[j]){
-             i++;
-         }
-     }
-     int resultArray[] = new int[ls.size()];
-     int k = 0;
-     for(int l = 0; l < ls.size(); l++){
-       //  System.out.println(ls.get(l));
-       resultArray[k] = (Integer)ls.get(l);
-       k++;
-     }
-     return resultArray;
+		//O(n) space O(n)
+		ArrayList<Integer> al = new ArrayList<Integer>();
+	    HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+	    for(int i = 0; i < nums1.length; i++)
+	       map.put(nums1[i], map.getOrDefault(nums1[i], 0) +1);
+	    for(int i = 0; i < nums2.length; i++){
+	        if(map.containsKey(nums2[i]) && map.get(nums2[i]) > 0){
+	            al.add(nums2[i]);
+	            map.put(nums2[i], map.get(nums2[i]) - 1);
+	        }
+	    }
+	    int[] res = new int[al.size()];
+	    for(int i = 0; i < res.length; i++)
+	        res[i] = al.get(i);
+	     return res; 
  }
 	public static void main(String[] args) {
 		int[] nums1 = {4,9,5}, nums2 = {9,4,9,8,4};
