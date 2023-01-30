@@ -15,11 +15,11 @@ public class Nov04_RingsAndRods {
         //Converting it into character array
         char[] c = rings.toCharArray();
         //to store the rods and set of rings
-        HashMap<Character, Set<Character>> map = new HashMap<>();
+        HashMap<Character, Set<Character>> map = new HashMap<Character, Set<Character>>();
         for(int i = 1; i < c.length; i = i + 2){
             if(map.containsKey(c[i])){
            //If the rod is already there, then get its value and store it hash set and add the new ring
-           HashSet<Character> hs = new HashSet<>();
+           HashSet<Character> hs = new HashSet<Character>();
            hs.addAll(map.get(c[i]));
            hs.add(c[i - 1]);
             map.put(c[i], hs);

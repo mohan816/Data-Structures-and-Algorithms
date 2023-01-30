@@ -1,66 +1,32 @@
 package arrays.practice.problems;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+
 public class IntersectionOfTwoArrays {
 	
 	//https://leetcode.com/problems/intersection-of-two-arrays/
 	//O(n^2) space - O(n)
 	 public int[] intersection(int[] nums1, int[] nums2) {
-
-	        //removing duplicates in first array
-	        for(int i = 0; i < nums1.length - 1; i++){
-	            if(nums1[i] == Integer.MIN_VALUE){
-	                continue;
-	            }
-	            for(int j = i + 1 ; j <nums1.length; j++){
-	                if(nums1[i] == nums1[j]){
-	                    nums1[j] = Integer.MIN_VALUE;
-	                }
-	            }
+		 ArrayList<Integer> al = new ArrayList<>();
+	        HashSet<Integer> hs = new HashSet<Integer>();
+	        HashSet<Integer> hs1 = new HashSet<Integer>();
+	        for(int i = 0; i < nums1.length; i++)
+	              hs.add(nums1[i]);
+	        for(int i = 0; i < nums2.length; i++)
+	              hs1.add(nums2[i]);
+	        for(int a : hs){
+	            if(hs1.contains(a))
+	                al.add(a);
 	        }
-	         //removing duplicates in second array
-	        for(int i = 0; i < nums2.length - 1; i++){
-	            if(nums2[i] == Integer.MIN_VALUE){
-	                continue;
-	            }
-	            for(int j = i + 1 ; j <nums2.length; j++){
-	                if(nums2[i] == nums2[j]){
-	                    nums2[j] = Integer.MIN_VALUE;
-	                }
-	            }
-	        }
-	        //finding intersection between both the arrays
-	        int count = 0;
-	        for(int i = 0; i < nums1.length; i++){
-	            if(nums1[i] == Integer.MIN_VALUE){
-	                continue;
-	            }
-	            for(int j = 0; j < nums2.length; j++){
-	                if(nums1[i] == nums2[j]){
-	                    count++;
-	                    break;
-	                }
-	            }
-	        }
-	       // System.out.println(count);
-	        int[] finalArray = new int[count];
-	        int k = 0;
-	        for(int i = 0; i < nums1.length; i++){
-	            if(nums1[i] == Integer.MIN_VALUE){
-	                continue;
-	            }
-	            for(int j = 0; j < nums2.length; j++){
-	                if(nums1[i] == nums2[j]){
-	                    finalArray[k] = nums1[i];
-	                    k++;
-	                    break;
-	                }
-	            }
+	        int[] arr = new int[al.size()];
+	        for(int i = 0; i < al.size(); i++)
+	            arr[i] = al.get(i);
+	        return arr;
+	      
 	        }
 
-	       return finalArray; 
 	    }
-
-}
 /*
 Input: nums1 = [1,2,2,1], nums2 = [2,2]
 Output: [2] */
