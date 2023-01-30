@@ -1,6 +1,7 @@
 package Strings.practice.problems;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class ShortestDistanceToACharacter {
 	//Positive - > String s = "loveleetcode";char c = 'e';

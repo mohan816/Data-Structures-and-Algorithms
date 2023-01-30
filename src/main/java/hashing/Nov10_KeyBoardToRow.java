@@ -29,9 +29,7 @@ public class Nov10_KeyBoardToRow {
                 al.add(words[i]);
 }
         }
-        String[] result = new String[al.size()];
-        al.toArray(result);
-        return result;
+           return al.toArray(new String[al.size()]);
     }
 
 	public static void main(String[] args) {

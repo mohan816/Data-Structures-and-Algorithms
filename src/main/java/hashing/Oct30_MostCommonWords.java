@@ -20,7 +20,6 @@ public class Oct30_MostCommonWords {
 
 	       int max = Integer.MIN_VALUE;
 		String strOutput = "";
-
 		String para = paragraph.replaceAll("[!?',;.]", " ").toLowerCase();
 		String[] word = para.split(" ");
 		System.out.println("word initial "+ Arrays.toString(word));

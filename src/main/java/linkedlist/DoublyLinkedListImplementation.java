@@ -58,7 +58,7 @@ public class DoublyLinkedListImplementation {
 	public static NodeDouble<Integer> addAll(int[] arr){
 		if(head == null) {
 			for(int i = 0; i < arr.length; i++) {
-				NodeDouble<Integer> node = new NodeDouble<>(arr[i]);
+				NodeDouble<Integer> node = new NodeDouble<Integer>(arr[i]);
 				if(head == null) {
 					head = node;
 					tail = node;
@@ -77,7 +77,7 @@ public class DoublyLinkedListImplementation {
 		}
 		else {
 			for(int i = 0; i < arr.length; i++) {
-				NodeDouble<Integer> node = new NodeDouble<>(arr[i]);
+				NodeDouble<Integer> node = new NodeDouble<Integer>(arr[i]);
 				NodeDouble<Integer> temp = tail;
 				tail.next = node;
 				tail = tail.next;
@@ -91,7 +91,7 @@ public class DoublyLinkedListImplementation {
 		// TODO Auto-generated method stub
 		insertNodeDoublyLinkedList();
 	   // print();
-		head = removeAll(head);
+		//head = removeAll(head);
 		//print();
 		int arr[] = {1, 2, 3, 4, 5};
 		addAll(arr);

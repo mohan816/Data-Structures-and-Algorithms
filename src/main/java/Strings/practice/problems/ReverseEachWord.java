@@ -26,7 +26,7 @@ public class ReverseEachWord {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "Let's";
+		String s = "Let's Nohan";
 		String result = reverseWords(s);
 		System.out.println(result);
 		
