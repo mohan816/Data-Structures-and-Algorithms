@@ -18,7 +18,7 @@ public class Nov08_TownJudge {
 	            return 1;
 	        }
 	        HashSet<Integer> hs = new HashSet<Integer>();
-	        HashMap<Integer, Integer> map = new HashMap<>();
+	        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 	        for(int i = 0; i < trust.length; i++){
 	            hs.add(trust[i][0]);
 	            map.put(trust[i][1], map.getOrDefault(trust[i][1], 0) + 1);

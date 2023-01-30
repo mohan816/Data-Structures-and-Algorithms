@@ -34,8 +34,8 @@ public class Oct31_Isomorphic {
 
 	public static boolean isIsomorphicOptimized(String s, String t) {
 
-		Map<Character, Integer> map1 = new HashMap<>();
-		Map<Character, Integer> map2 = new HashMap<>();
+		Map<Character, Integer> map1 = new HashMap<Character, Integer>();
+		Map<Character, Integer> map2 = new HashMap<Character, Integer>();
 
 		for(Integer i = 0; i <s.length(); i ++) {
 			if(map1.put(s.charAt(i), i) != map2.put(t.charAt(i), i))

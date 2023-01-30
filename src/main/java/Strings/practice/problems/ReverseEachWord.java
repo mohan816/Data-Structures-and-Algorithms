@@ -62,9 +62,14 @@ public class ReverseEachWord {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
+		String s = "Let's Nohan";
+		String result = reverseWords(s);
+=======
 		String s = "Mohan Rajan Natarajan Rani";
 		//String result = reverseWords(s);
 		String result = reverseEachWord(s);
+>>>>>>> f89aa65d0ee2304f4313b154ee331bcfa0613882
 		System.out.println(result);
 	}
 

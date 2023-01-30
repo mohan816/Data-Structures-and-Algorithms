@@ -21,7 +21,7 @@ You could output an array (or modify the given array) that looks like this: [3,1
 				nums[middle] = nums[low];
 				nums[low] = temp;
 				low++;
-				//middle++;
+				middle++;
 			}
 			 else if(getCategory(nums[middle]).equalsIgnoreCase("Middle")) {
 				 middle++;
