@@ -28,6 +28,7 @@ public class GroupAllAnagrams {
 	            }
 	            boolean flag = false;
 	             for(int m = 0; m < count.length; m++){
+	            	 int a = 99;
 	                    if(count[m] != count1[m]){
 	                          flag = true;
 	                          break;
