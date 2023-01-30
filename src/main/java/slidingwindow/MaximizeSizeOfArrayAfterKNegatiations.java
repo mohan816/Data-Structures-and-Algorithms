@@ -5,27 +5,22 @@ import java.util.TreeSet;
 public class MaximizeSizeOfArrayAfterKNegatiations {
 
 	public static int largestSumAfterKNegations(int[] nums, int k) {
-		TreeSet<Integer> ts = new TreeSet<Integer>();
-		for(int i = 0; i < nums.length; i++){
-			ts.add(nums[i]);
-		}
-		int kCount = 0;
-		while(kCount < k) {
-			for(int num : ts){
-				ts.add(-(num));
-				ts.remove(num);
-				kCount++;
-				if(kCount >= k) {
-					break;
-				}
-			}
-		}
-		
-		int sum = 0;
-		for(int num : ts){
-			sum += num;
-		}
-		return sum;
+		int kCount = 0, sum = 0;
+        while(kCount < k){
+            int min = nums[0], index = 0;
+            for(int i = 1; i < nums.length; i++){
+                if(min > nums[i]){
+                    min = nums[i];
+                    index = i;
+                }
+            }
+            nums[index] = -nums[index];
+            kCount++;
+        }
+        for(int i = 0; i < nums.length; i++){
+            sum += nums[i];
+        }
+        return sum;
 	}
 
 	public static void main(String[] args) {

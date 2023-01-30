@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Oct31_Isomorphic {
-	
+
 	//https://leetcode.com/problems/isomorphic-strings/description/
 	/*
 	 * 1) If the map is empty put first character of string s to key and first character string t to value
@@ -13,24 +13,37 @@ public class Oct31_Isomorphic {
 	 * 3) If the key from string s which we are going to put to the map is not there in key, then the check the value which we are going to put is already
 	 * there in the map, if it is there then return false.
 	 */
-	
+
 	public static boolean isIsomorphic(String s, String t) {
-        Map<Character,Character> map = new HashMap<Character,Character>();
-        for(int i = 0; i < s.length(); i++){
-            if(map.containsKey(s.charAt(i))){
-               if(map.get(s.charAt(i)) != t.charAt(i))
-                   return false;
-            }
-            else{
-                if(map.containsValue(t.charAt(i))){
-                    return false;
-                }
-                   map.put(s.charAt(i),t.charAt(i)); 
-            }
-                   
-        }
-        return true;
-    }
+		Map<Character,Character> map = new HashMap<Character,Character>();
+		for(int i = 0; i < s.length(); i++){
+			if(map.containsKey(s.charAt(i))){
+				if(map.get(s.charAt(i)) != t.charAt(i))
+					return false;
+			}
+			else{
+				if(map.containsValue(t.charAt(i))){
+					return false;
+				}
+				map.put(s.charAt(i),t.charAt(i)); 
+			}
+
+		}
+		return true;
+	}
+
+	public static boolean isIsomorphicOptimized(String s, String t) {
+
+		Map<Character, Integer> map1 = new HashMap<>();
+		Map<Character, Integer> map2 = new HashMap<>();
+
+		for(Integer i = 0; i <s.length(); i ++) {
+			if(map1.put(s.charAt(i), i) != map2.put(t.charAt(i), i))
+				return false;
+		}
+		System.out.println();
+		return true;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -38,7 +51,7 @@ public class Oct31_Isomorphic {
 		//Output: false, Input : s = "foo", t = "bar"
 		//Output: true, Input : s = "Paper", t = "title"
 		String s = "egg", t = "add";
-		boolean b = isIsomorphic(s,t);
+		boolean b = isIsomorphicOptimized(s,t);
 		System.out.println(b);
 
 	}

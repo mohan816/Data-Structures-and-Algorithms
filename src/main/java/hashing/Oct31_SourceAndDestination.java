@@ -17,14 +17,13 @@ public class Oct31_SourceAndDestination {
 	public static String destCity(List<List<String>> paths) {
         Map<String,String> map = new HashMap<String,String>();
         for(int i = 0; i < paths.size(); i++){
-            for(int j = 1; j < paths.get(i).size(); j++)
-                  map.put(paths.get(i).get(0),paths.get(i).get(1));
+           map.put(paths.get(i).get(0),paths.get(i).get(1));
             }
-            for(Map.Entry<String,String> c : map.entrySet())
-             if(!map.containsKey(c.getValue())){
-                 return c.getValue();
-             }
-             return "";
+            for(Map.Entry<String,String> c : map.entrySet()) {
+            	if(!map.containsKey(c.getValue()))
+                    return c.getValue();
+            }
+            return "";
         }
 
 	public static void main(String[] args) {

@@ -46,16 +46,16 @@ public class VowelsInSubStringK {
 	
 	//Optimized Solution
 	private int maxVowels(String input, int k){
-        if(k==0) return 0;
-        int current_count=0,max_count=0, index=0;
-
-        while(index < k-1)
-            current_count += isVowel(input.charAt(index++));
-
-        while(index < input.length()) {
-            current_count += isVowel(input.charAt(index++));
-            max_count = Math.max(max_count, current_count);
-            current_count -= isVowel(input.charAt(index-k));
+        int max_count = Integer.MIN_VALUE;
+        int count = 0;
+        for(int i = 0; i < k ; i++) {
+        	count += isVowel(input.charAt(i));
+        }
+        max_count = count;
+        for(int i = k; i < input.length(); i++) {
+         count -= isVowel(input.charAt(i - k));
+         count += isVowel(input.charAt(i));
+         max_count = Math.max(max_count, count);
         }
         return max_count;
     }
@@ -65,9 +65,9 @@ public class VowelsInSubStringK {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "workaattech";
+		String s = "workaatteaiouch";
 		int k = 3;
-		int result = vowelsMaxInSubstring(s,3);
+		int result = vowelsMaxInSubstring(s,5);
 		System.out.println("Maximun number of count is " +result);
 	}
 

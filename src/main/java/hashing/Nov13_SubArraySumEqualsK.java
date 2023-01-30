@@ -24,9 +24,7 @@ public class Nov13_SubArraySumEqualsK {
             count++;
             if(map.containsKey(pre_sum - k))
             count = count + map.get(pre_sum - k);
-            map.put(pre_sum, map.getOrDefault(pre_sum, 0) + 1);
-            
-           
+            map.put(pre_sum, map.getOrDefault(pre_sum, 0) + 1);   
         }
       return count; 
 }
