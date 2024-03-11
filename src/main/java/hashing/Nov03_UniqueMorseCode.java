@@ -57,7 +57,7 @@ public class Nov03_UniqueMorseCode {
 	
 	//Another method
 	public static int uniqueMorseRepresentations_AnotherSolution(String[] words) {
-	String[] alphabet = new String[] {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-.."
+	String[] alphabet = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-.."
             ,"--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
     Set<String> uniqueRepresentations = new HashSet<>();
     

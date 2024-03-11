@@ -55,20 +55,20 @@ public class LongestPallindromicSubString {
     5) return the largest pallindromic substring
     */
 	public static String longestPallindromeOptimized(String s) {
-		 String max = "";
+		 StringBuffer sb = new StringBuffer();
 	        for(int i = 0; i < 2 * s.length(); i++){
 	            int left = i/2, right = left + i % 2;
 	            while(left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)){
 	                    String sub = s.substring(left,right+1);
-	                           if(max.length() < sub.length()){
-	                                 max = sub;
+	                           if(sb.length() < sub.length()){
+	                                 sb = new StringBuffer().append(sub);
 	                    }
 	                left--;
 	                right++;
 	                    }     
 	                }
 	                
-	  return max;
+	  return sb.toString();
 		
 	}
 

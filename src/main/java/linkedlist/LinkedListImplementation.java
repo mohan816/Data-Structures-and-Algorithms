@@ -13,24 +13,22 @@ public class LinkedListImplementation {
 		int a = sn.nextInt();
 		temp = null;
 		while(a != -1) {
+			Node<Integer> n1 = new Node<Integer>(a);
 			if(head == null) {
-				Node<Integer> n1 = new Node<Integer>(a);
 				head = n1;
 				temp = n1;
 				length++;
 			}
 			else {
-				a = sn.nextInt();
-				if(a != -1) {
-					Node<Integer> n1 = new Node<Integer>(a);
-					temp.next = n1;
-					temp = temp.next;
-					length++;
+				temp.next = n1;
+				temp = temp.next;
+				length++;
 				}
-				
+				a = sn.nextInt();
 			}
-		}
 		return head;
+		}
+		
 		
 		/*
 		 * Node<Integer> n1 = new Node<Integer>(10); Node<Integer> n2 = new
@@ -38,7 +36,6 @@ public class LinkedListImplementation {
 		 * = new Node<Integer>(20); head = n1; n1.next = n2; n2.next = n3; n3.next = n4;
 		 * return head;
 		 */	
-	}
 	
 	public static Node<Integer> remove(int index){
 		if(index > length)

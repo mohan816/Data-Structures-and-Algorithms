@@ -1,5 +1,7 @@
 package Strings.practice.problems;
 
+import java.util.Arrays;
+
 public class ReverseOnlyLetters {
 	
 	//Positive - > String s = "a-bC-dEf-ghIj";
@@ -18,31 +20,30 @@ public class ReverseOnlyLetters {
 		//converting it to character array
 		char[] c = s.toCharArray();
 		int i = 0, j = c.length-1;
-		//Ascii vlaues of english letters starts from 65 to 122
-		while(i < j){
-			if((c[i] >= 65 && c[i] <= 122) && (c[j] >= 65 && c[j] <= 122)){
-				char ch = c[i];
+		while(i < j) {
+			if(Character.isAlphabetic(c[i]) && Character.isAlphabetic(c[j])) {
+				char temp = c[i];
 				c[i] = c[j];
-				c[j] = ch;
+				c[j] = temp;
 				i++;
 				j--;
 			}
-			else if(!(c[i] >= 65 && c[i] <= 122) && (c[j] >= 65 && c[j] <= 122)){
-				i++;
-			}
-			else if((c[i] >= 65 && c[i] <= 122) && !(c[j] >= 65 && c[j] <= 122)){
+			else if(Character.isAlphabetic(c[i]) && !Character.isAlphabetic(c[j])) {
 				j--;
 			}
-			else{
+			else if(!Character.isAlphabetic(c[i]) && Character.isAlphabetic(c[j])) {
+				i++;
+			}
+			else {
 				i++;
 				j--;
 			}
 		}
-		String result = "";
-		for(int k = 0; k < c.length; k++){
-			result = result + c[k];
-		}
-		return result;
+		//Ascii vlaues of english letters starts from 65 to 122
+		StringBuffer sb = new StringBuffer();
+		for(int k = 0; k < c.length; k++)
+			  sb.append(c[k]);
+		return sb.toString();
 
 	}
 

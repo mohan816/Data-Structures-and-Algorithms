@@ -12,7 +12,7 @@ public class MaximumProductSubArray {
     */
     public static int maxProduct(int[] arr) {
 
-        int min = arr[0], max = arr[0], result = arr[0]; // 4 -5 3 
+        int min = arr[0], max = arr[0], result = arr[0]; // 4 -5 3 -1
         for(int i = 1; i < arr.length; i++){
             int temp = max;                                                  // -20, -20 , -5   max = -5, min = -20, -15, 3 -10 4 
         max = Math.max(Math.max(max * arr[i], min * arr[i]), arr[i]);
@@ -40,6 +40,9 @@ public class MaximumProductSubArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int[] arr = {4,-5,3,-1};       
+				                        
+		System.out.println(maxProduct(arr));
 
 	}
 

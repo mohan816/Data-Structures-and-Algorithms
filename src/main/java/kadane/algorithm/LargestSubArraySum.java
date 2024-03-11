@@ -22,7 +22,8 @@ public class LargestSubArraySum {
 
 	public static void main(String[] args) {
 		int[] arr = {-10, -100, -1, -2000, -3};
-		int result = largestSubArraySum(arr);
+		int[] arr1 = {1,2,3,4,100, -101};
+		int result = largestSubArraySum(arr1);
 		System.out.println(result);
 
 	}

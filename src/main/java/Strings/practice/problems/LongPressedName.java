@@ -34,7 +34,7 @@ public class LongPressedName {
                i++;
                j++;
            }
-           else if(name.charAt(i) != typed.charAt(j) && typed.charAt(j) == temp){
+           else if(typed.charAt(j) == temp){
                j++;
            }
             else{
@@ -62,7 +62,7 @@ public class LongPressedName {
 
 	public static void main(String[] args) {
 
-		String name = "rick", typed = "kcir";
+		String name = "abc", typed = "abb";
 		boolean result = isLongPressedName(name,typed);
 		System.out.println(result);
 

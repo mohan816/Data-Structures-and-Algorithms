@@ -2,27 +2,19 @@ package recursion;
 
 public class SumOfDigits {
 	
-	static int output = 0;
 	
 	public static int sumOfDigits(int n) {
-		if(n == 0)
-			 return 0;
-		output += n % 10;
-		int out = sumOfDigits(n/10);
+		if(n < 10)
+			return n;
+		int output = n % 10 + sumOfDigits(n / 10);
 		return output;
 	}
 	
-	static int count = 0;
 	public static int countChars(String s) {  // bbbb
-		if(s.length() == 2) {
-			return 0;
-		}
-		//System.out.println();
-		if(s.charAt(0) == s.charAt(2)) {
-			count++;
-		}
-		countChars(s.substring(1));
-		return count;
+		if(s.length() == 1)
+			 return 1;
+	    return 1 + countChars(s.substring(1));
+		
 	}
 	//countChars slidingWindow
 	public static int countCharsSliding(String s) {
@@ -37,7 +29,7 @@ public class SumOfDigits {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(sumOfDigits(123456789));
-		System.out.println(countChars("bbbb"));
+		System.out.println(countChars("bbbbcdefgh"));
 		System.out.println(countCharsSliding("babababab"));
 
 	}

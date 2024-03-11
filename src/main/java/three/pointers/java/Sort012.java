@@ -45,9 +45,17 @@ public class Sort012 {
 		}
 		return arr;
 	}
+	
+	public static void predict() {
+		String str = "geeks@for@gekss";
+		String[] arr = str.split("@",2);
+		for(String a: arr)
+		System.out.println(a);
+	}
 
 	public static void main(String[] args) {
 		int[] arr = {2,0,2,1};
+		predict();
 		int[] result = sort012(arr);
 		for(int i = 0; i < result.length; i++) {
 			System.out.print(arr[i]+" ");

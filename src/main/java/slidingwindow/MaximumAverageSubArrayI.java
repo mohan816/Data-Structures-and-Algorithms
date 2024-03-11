@@ -24,11 +24,28 @@ public class MaximumAverageSubArrayI {
         }
        return highest;
     }
+	
+	public static double max(int[] arr, int k) {
+		int right = 0, left = 0, sum = 0;
+		double highest = 0.0;
+		while(right < k) {
+			sum += arr[right++];
+		}
+		highest = sum / (double)k ;
+		while(right < arr.length) {
+			sum -= arr[left++];
+			sum += arr[right++];
+			highest = Math.max(sum / (double)k, highest);
+		}
+		 return highest;
+	}
    public static void main(String[] args) {
 	   int[] arr = {1,12,-5,-6,50,3};
 	   int k = 4;
 	   double result = findMaxAverage(arr, k);
 	   System.out.println(result);
+	   double ans = max(arr, k);
+	   System.out.println(ans);
    }
 
 }

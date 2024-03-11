@@ -18,9 +18,10 @@ public class Oct30_MostCommonWords {
 	
 	public static String mostCommonWord(String paragraph, String[] banned) {
 
-	       int max = Integer.MIN_VALUE;
+	    int max = Integer.MIN_VALUE;
 		String strOutput = "";
 		String para = paragraph.replaceAll("[!?',;.]", " ").toLowerCase();
+		System.out.println(para);
 		String[] word = para.split(" ");
 		System.out.println("word initial "+ Arrays.toString(word));
 
@@ -32,7 +33,7 @@ public class Oct30_MostCommonWords {
 		HashMap <String,Integer> map = new HashMap<String,Integer>();
 
 		for (int i = 0; i < word.length; i++) {
-			if(!set.contains(word[i]) && !word[i].equals("")) {
+			if(!set.contains(word[i]) && !word[i].equals("//s")) {
 				map.put(word[i],map.getOrDefault(word[i], 0)+1);
 				if(map.get(word[i] ) > max) {
 					max = map.get(word[i]);
@@ -50,6 +51,9 @@ public class Oct30_MostCommonWords {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
+				String[] banned = {"hit"};
+		 System.out.println(mostCommonWord(paragraph,banned));
 		//Input: paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.", banned = ["hit"]
 		//Output: "ball"
 		

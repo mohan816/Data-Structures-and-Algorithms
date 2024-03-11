@@ -27,7 +27,6 @@ public class CountCharacters {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(countingSequence("aaaAbbbccdaa"));
-		>>>>>>> f89aa65d0ee2304f4313b154ee331bcfa0613882
 
 	}
 

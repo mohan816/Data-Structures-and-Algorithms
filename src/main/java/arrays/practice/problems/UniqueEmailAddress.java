@@ -35,7 +35,7 @@ public class UniqueEmailAddress {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-          String[] words = {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
+          String[] words = {"test1.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
           numUniqueEmails(words);
           }
 	}

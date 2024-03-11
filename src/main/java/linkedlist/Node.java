@@ -2,9 +2,9 @@ package linkedlist;
 
 public class Node<T> {
 	
-	int data;
+	T data;
 	Node<T> next;
-	Node(int data){
+	Node(T data){
 		this.data = data;
 	}
 
