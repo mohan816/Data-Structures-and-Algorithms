@@ -1,4 +1,4 @@
-package stacks.queues;
+package stacks;
 
 public class UsingStackImplementation {
 

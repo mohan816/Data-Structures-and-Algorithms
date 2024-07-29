@@ -1,5 +1,8 @@
 package arrays.practice.problems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*// Positive - > int[] a = {1, 3, 4, 5, 7, 9, 1, 0, -1};
  * Negative - > No pairs
  * edge - > suppose if an array is empty
@@ -11,7 +14,7 @@ package arrays.practice.problems;
 //Time Compexity O(n^2), space O(1)
 public class AllPairs {
 	
-	public static void allPairs(int[] arr, int x) {
+	public static void pairsAll(int[] arr, int x) {
 		if(arr.length == 0) {
 			System.out.println("Array is empty");
 	        return;
@@ -26,11 +29,29 @@ public class AllPairs {
 			}
 		}
 	}
+	
+	//Time & Space complexity O(n)
+	public static ArrayList<List<Integer>> allPairs(int[] a, int target){
+		   ArrayList<List<Integer>> listOfPairs = new ArrayList<List<Integer>>();
+		   ArrayList<Integer> al = new ArrayList<>();
+		   for(int i = 0; i < a.length; i++) {
+			   if(al.contains(target - a[i])) {
+				   ArrayList<Integer> pair = new ArrayList<>();
+				   pair.add(target-a[i]);
+				   pair.add(a[i]);
+				   listOfPairs.add(pair);
+			   }
+			   al.add(a[i]);  
+		   }
+		   return listOfPairs;
+	}
 
 	public static void main(String[] args) {
-		int[] a = {1, 3, 4, 5, 7, 9, 1, 0, -1};
-		allPairs(a, 4);
-
+		int[] a = {9, 5, 14, 3, 1, 15, 6};
+		ArrayList<List<Integer>> listOfPairs = allPairs(a, 20);
+		for(int i = 0; i < listOfPairs.size(); i++) {
+                 System.out.println(listOfPairs.get(i));
+	}
 	}
 
 }

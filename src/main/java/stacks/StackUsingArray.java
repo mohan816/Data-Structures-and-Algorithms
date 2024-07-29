@@ -1,65 +1,52 @@
 package stacks;
 
+import java.util.NoSuchElementException;
+
 public class StackUsingArray {
 	
 	private int[] data;
-	int top;
+	private int index = -1;
 	
-	public StackUsingArray() {
-		data = new int[1];
-		top = -1;
+	public StackUsingArray(){
+		data = new int[5];
 	}
 	
-	//O(1)
-	//if top == data.length - 1, which means data array is filled, if we
-	//want to insert an element then we need to double the size of the data array
 	public void push(int ele) {
-		if(top == data.length - 1) {
-			doubleCapacity();
-		}
-		data[++top] = ele;
+		if(index == data.length - 1)
+			throw new NoSuchElementException();
+		data[index + 1] = ele;
+		index++;	
 	}
 	
-	//O(n)
-	private void doubleCapacity() {
-		int[] temp = data;
-		data = new int[2 * temp.length];
-		for(int i = 0; i < temp.length; i++) {
-			data[i] = temp[i];
+	public int pop() {
+		int pop = data[index];
+		index--;
+		return pop;
+	}
+	
+	public int top() {
+		if(index == -1) {
+			System.out.println("Stack is Empty "+this.isEmpty());
+			return -1;
+		}
+		else {
+		return data[index];
 		}
 	}
 	
-	//O(1)
 	public int size() {
-		return top + 1;
+		return index + 1;
 	}
 	
-	//O(1)
 	public boolean isEmpty() {
-		return top == -1;
+		if(index == -1)
+			return true;
+		return false;
 	}
 	
-	//O(1)
-	public int pop() throws StackEmptyException {
-		if(top == -1) {
-			throw new StackEmptyException();
-		}
-		return data[top--];
-	}
-	
-	//O(1)
-	public int top() throws StackEmptyException {
-		if(top == -1) {
-			throw new StackEmptyException();
-		}
-		return data[top];
-	}
-	
-	//O(n)
 	public void print() {
-		for(int i = 0; i <= top; i++) {
+		for(int i = index; i >= 0; i--)
 			System.out.print(data[i]+" ");
-		}
 	}
 	
 

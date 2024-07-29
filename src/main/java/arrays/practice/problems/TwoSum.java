@@ -1,6 +1,8 @@
 package arrays.practice.problems;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class TwoSum {
 	
@@ -28,13 +30,30 @@ public class TwoSum {
 			}
 		return a;
 		}
+	public static int[] sum(int[] arr, int target) {
+		if(arr.length < 2)
+			return new int[0];
+		int[] result = new int[2];
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for(int i = 0; i < arr.length; i++) {
+			if(map.containsKey(target - arr[i])) {
+				result[0] = map.get(target - arr[i]);
+			    result[1] = i;
+			    break;
+			}
+			else
+				map.put(arr[i], i);
+			  
+		}
+		return result;
+	}
 		
 
 	public static void main(String[] args) {
-		int[] arr = {1};
-		int target = 8;
+		int[] arr = {2, 7, 11, 15};
+		int target = 18;
 
-		int[] resultArray = twoSum(arr, target);
+		int[] resultArray = sum(arr, target);
 		for(int i = 0; i < resultArray.length; i++) {
 			System.out.print(resultArray[i]+" ");
 		}

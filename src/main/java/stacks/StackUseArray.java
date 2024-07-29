@@ -1,6 +1,6 @@
 package stacks;
 
-public class StackUse {
+public class StackUseArray {
 
 	public static void main(String[] args) throws StackEmptyException {
 		// TODO Auto-generated method stub
