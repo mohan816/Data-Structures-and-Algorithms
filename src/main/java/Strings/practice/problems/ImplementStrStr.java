@@ -3,6 +3,7 @@ package Strings.practice.problems;
 public class ImplementStrStr{
 	
 	//function to locate the first occurrence of String x in  String s
+	//https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/submissions/2050606274/
 	
 	/*
 	 * 1) Iterate the String s from index 0 < s.length() - x.length() - 1
