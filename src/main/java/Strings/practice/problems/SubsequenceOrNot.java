@@ -2,6 +2,7 @@ package Strings.practice.problems;
 
 /*Check String s2 is subsequence of s1
 We have to remove zero or more characters in the String s1 without changing it's order and check s1 equals s2*/
+//https://leetcode.com/problems/is-subsequence/description/
 
 
 public class SubsequenceOrNot{
