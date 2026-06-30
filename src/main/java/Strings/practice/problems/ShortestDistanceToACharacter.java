@@ -7,6 +7,8 @@ public class ShortestDistanceToACharacter {
 	//Positive - > String s = "loveleetcode";char c = 'e';
 	//Negative - > No target character
 	//Edge - > Empty String
+
+	//https://leetcode.com/problems/shortest-distance-to-a-character/submissions/825867221/
 	
 	/*  Forward direction
 	 * 1) Convert String into empty array
